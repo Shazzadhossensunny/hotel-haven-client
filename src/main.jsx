@@ -12,6 +12,9 @@ import Rooms from './pages/Rooms';
 import MyBookings from './pages/MyBookings';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AuthContextComponent from './Context/AuthContextComponent';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +46,9 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthContextComponent>
    <RouterProvider router={router} />
+   <ToastContainer></ToastContainer>
+   </AuthContextComponent>
   </React.StrictMode>,
 )

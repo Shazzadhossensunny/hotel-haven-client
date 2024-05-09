@@ -1,6 +1,29 @@
+import { useContext } from "react";
 import { Link, NavLink} from "react-router-dom";
+import { AuthContext } from "../Context/AuthContextComponent";
+import { toast } from "react-toastify";
 
 export default function Navbar() {
+  const {user,logOut, loading}= useContext(AuthContext)
+
+  if (loading) {
+    return (
+      <div className=" h-screen flex justify-center items-center">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    );
+  }
+
+  const handleLogOut = () => {
+    logOut()
+    .then(()=>{
+      toast.success("Sign Out");
+    })
+    .catch((error)=>{
+      console.log(error.message)
+    })
+
+  }
   return (
     <nav className="bg-[#1c1c1d]">
       <div className="container mx-auto">
@@ -56,8 +79,11 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn bg-[#153D39] text-white border-0 text-lg hover:bg-[#f57b1d]">Login</a>
-            <a className="btn bg-[#153D39] text-white border-0 text-lg hover:bg-[#f57b1d]">LogOut</a>
+            {
+              user ? <Link onClick={handleLogOut} className="btn bg-[#153D39] text-white border-0 text-lg hover:bg-[#f57b1d]">LogOut</Link> : <Link to='/login' className="btn bg-[#153D39] text-white border-0 text-lg hover:bg-[#f57b1d]">Login</Link>
+            }
+
+
           </div>
         </div>
       </div>

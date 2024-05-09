@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Deluxe King Room",
+    "image_url": "https://i.postimg.cc/pdVwD73D/deluxe.jpg",
+    "description": "Experience luxury and comfort in our deluxe king room. Featuring a spacious king-size bed, modern amenities, and elegant decor.",
+    "price_per_night": 220
+  },
+  {
+    "name": "Executive Suite",
+    "image_url": "https://i.postimg.cc/cHrPz3xC/suite.jpg",
+    "description": "Elevate your stay with our executive suite. Enjoy panoramic city views, a separate living area, and personalized service.",
+    "price_per_night": 350
+  },
+  {
+    "name": "Family Villa",
+    "image_url": "https://i.postimg.cc/KvnwCx2P/vila.jpg",
+    "description": "Create unforgettable family memories in our spacious family villa. Featuring multiple bedrooms, a private pool, and lush garden views.",
+    "price_per_night": 500
+  },
+  {
+    "name": "Oceanfront Bungalow",
+    "image_url": "https://i.postimg.cc/Z5HgKH00/occenfront.jpg",
+    "description": "Escape to paradise in our oceanfront bungalow. Enjoy direct beach access, stunning ocean views, and personalized service.",
+    "price_per_night": 400
+  },
+  {
+    "name": "Penthouse Suite",
+    "image_url": "https://i.postimg.cc/Ss2tdpdz/pentahouse.jpg",
+    "description": "Experience the height of luxury in our penthouse suite. Featuring a private terrace, jacuzzi, and unparalleled city skyline views.",
+    "price_per_night": 800
+  },
+  {
+    "name": "Standard Double Room",
+    "image_url": "https://i.postimg.cc/wvC4bb44/double.jpg",
+    "description": "Enjoy comfort and convenience in our standard double room. Perfect for solo travelers or couples exploring the city.",
+    "price_per_night": 150
+  }
+]

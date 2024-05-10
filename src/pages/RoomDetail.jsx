@@ -1,23 +1,52 @@
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContextComponent";
 
 export default function RoomDetail() {
   const loadData = useLoaderData();
+
+
   const {
     _id,
     name,
     description,
     price_per_night,
     room_size,
-    availability,
+    availability: initialAvailability,
     image_url,
     special_offers,
     reviews,
     total_reviews,
   } = loadData;
+
+
+
+
+  const [availability, setAvailability] = useState(initialAvailability);
+  const handleBook = (id, newAvailability) => {
+    fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`,{
+        method: "PUT",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({ availability: newAvailability  }),
+
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.modifiedCount > 0){
+            setAvailability(newAvailability);
+            alert("Booked room")
+        }
+        console.log(data)
+    })
+
+
+  };
   return (
     <div className="container mx-auto my-12 lg:my-24">
       <div className="flex gap-6">
-        <div className="w-2/3">
+        <div className="w-2/3 mx-auto">
           <h2 className="text-center text-4xl font-semibold">{name}</h2>
           <div className="flex justify-between my-5">
             <h2 className="text-2xl font-bold">
@@ -44,9 +73,14 @@ export default function RoomDetail() {
               <p>No Offers Available</p>
             )}
           </div>
-        </div>
-        <div className="w-1/3">
-          <p>Book Now</p>
+
+          <button
+            disabled={availability !== "Available"}
+            onClick={() => handleBook(_id, "Unavailable")}
+            className="btn btn-primary mt-5"
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>

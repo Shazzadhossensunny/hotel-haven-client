@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import AuthContextComponent from './Context/AuthContextComponent';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Room from './pages/Room';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,9 +39,15 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/room/:id",
+        element: <Room></Room>,
+        loader:({params}) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
       }
+
     ]
   },
 ]);

@@ -12,7 +12,6 @@ export default function Rooms() {
     })
   },[])
   const availableRooms = rooms.filter(room => room.availability === 'Available')
-  console.log(availableRooms)
   return (
     <div className="container mx-auto my-12 lg:my-24">
       <h2 className="text-center text-5xl uppercase tracking-wider mb-10">Available Rooms</h2>

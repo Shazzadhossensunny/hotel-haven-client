@@ -30,10 +30,6 @@ export default function FeaturedRooms() {
                     </Link>
                 </div>)
                 }
-
-
-
-
         </div>
 
     </div>

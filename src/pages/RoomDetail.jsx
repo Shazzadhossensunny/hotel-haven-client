@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from "../Context/AuthContextComponent";
 
 export default function RoomDetail() {
   const loadData = useLoaderData();
   const [startDate, setStartDate] = useState(null);
+  const {user} = useContext(AuthContext)
+  const email = user.email
+
 
   const {
     _id,
@@ -26,6 +30,7 @@ export default function RoomDetail() {
     const requestBody = {
       availability: newAvailability,
       startDate: bookingDate,
+      email
     };
     fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
       method: "PUT",

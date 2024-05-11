@@ -1,10 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function MyBookings() {
   const { user } = useContext(AuthContext);
   const [userRooms, setUserRooms] = useState([]);
+  // const [startDate, setStartDate] = useState(new Date());
+
 
 
   useEffect(() => {
@@ -27,6 +30,10 @@ export default function MyBookings() {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      const updatedRooms = userRooms.map((room) =>
+          room._id === id ? { ...room, startDate: newDate } : room
+        );
+        setUserRooms(updatedRooms);
 
 
 
@@ -39,7 +46,6 @@ export default function MyBookings() {
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       if(data.deletedCount > 0){
         alert("delete")
         const remaining = userRooms.filter((r)=> r._id !== id)
@@ -77,13 +83,20 @@ export default function MyBookings() {
                 <td>$ {userRoom.price_per_night}</td>
                 <td>{userRoom.room_size}</td>
                 <td>
-                  <input
+                  {/* <input
                   className="border p-2 rounded-md"
                     type="date"
                     defaultValue={
                       new Date(userRoom.startDate).toISOString().split("T")[0]
+
                     }
+                  /> */}
+                   <DatePicker
+                    className="border p-2 rounded-md"
+                    selected={new Date(userRoom.startDate)}
+                    onChange={(date) => handleDateUpdate(userRoom._id, date)}
                   />
+
 
 
 

@@ -15,16 +15,3 @@ body {
   top: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.divi {
-  position: relative;
-  padding-bottom: 15px;
-}
-.divi::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 3px;
-  background-color: #fff;
-  left: 50%;
-  transform: translateX(-50%);
-}

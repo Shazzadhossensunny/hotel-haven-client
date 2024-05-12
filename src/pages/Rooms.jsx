@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import RoomsCard from "../components/RoomsCard"
 
 
+
 export default function Rooms() {
   const [rooms, setRooms] = useState([])
   useEffect(()=>{

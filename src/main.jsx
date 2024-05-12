@@ -16,6 +16,7 @@ import AuthContextComponent from './Context/AuthContextComponent';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RoomDetail from './pages/RoomDetail';
+import Review from './pages/Review';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +47,12 @@ const router = createBrowserRouter([
         path: "/room/:id",
         element: <RoomDetail></RoomDetail>,
         loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
+      },
+      {
+        path: "/review/:id",
+        element: <Review></Review>,
+        loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/review/${params.id}`)
+
       }
 
     ]

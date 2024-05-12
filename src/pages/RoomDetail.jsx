@@ -8,9 +8,9 @@ import { AuthContext } from "../Context/AuthContextComponent";
 export default function RoomDetail() {
   const loadData = useLoaderData();
   const [startDate, setStartDate] = useState(null);
-  const {user} = useContext(AuthContext)
-  const email = user.email
-
+  const [isRoomBooked, setIsRoomBooked] = useState(false);
+  const { user } = useContext(AuthContext);
+  const email = user?.email;
 
   const {
     _id,
@@ -30,7 +30,7 @@ export default function RoomDetail() {
     const requestBody = {
       availability: newAvailability,
       startDate: bookingDate,
-      email
+      email,
     };
     fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
       method: "PUT",
@@ -43,6 +43,7 @@ export default function RoomDetail() {
       .then((data) => {
         if (data.modifiedCount > 0) {
           setAvailability(newAvailability);
+          setIsRoomBooked(true);
           toast.success("Successfully Book Room");
         }
         console.log(data);
@@ -110,9 +111,13 @@ export default function RoomDetail() {
                 </div>
               ))
             ) : (
+              <p>No reviews available... </p>
+            )}
+            {isRoomBooked && (
               <p>
-                No reviews available...{" "}
-                <Link className="btn-link">Add Review</Link>{" "}
+                <Link to={`/review/${_id}`} className="btn-link">
+                  Add Review
+                </Link>
               </p>
             )}
           </div>

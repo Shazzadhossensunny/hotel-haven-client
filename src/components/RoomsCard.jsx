@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function RoomsCard({ availableRoom }) {
-  const { _id, image_url, name, price_per_night, availability, total_reviews } =
+  const { _id, image_url, name, price_per_night, availability, reviews} =
     availableRoom;
+    console.log(availableRoom)
   return (
     <Link to={`/room/${_id}`}>
       <div className="card bg-base-100 shadow-xl">
@@ -15,7 +16,7 @@ export default function RoomsCard({ availableRoom }) {
         <div className="card-body">
           <h2 className="text-2xl font-semibold">{name}</h2>
           <h3 className="card-title">Price Per Night : ${price_per_night}</h3>
-          <p className="text-lg font-medium">Total Review : {total_reviews}</p>
+          <p className="text-lg font-medium">Total Review : {reviews?.length || 0}</p>
         </div>
       </div>
     </Link>

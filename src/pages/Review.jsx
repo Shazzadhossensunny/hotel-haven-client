@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 export default function Review() {
     const {user} = useContext(AuthContext)
     const {id} = useParams()
-    console.log(id)
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = user.displayName;
@@ -23,9 +22,9 @@ export default function Review() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // if(data.insertedId){
-        //     alert('successfully add review')
-        // }
+        if(data.modifiedCount > 0){
+            alert('successfully add review')
+        }
       });
   };
   return (

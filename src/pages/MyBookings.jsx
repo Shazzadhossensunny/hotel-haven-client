@@ -8,8 +8,7 @@ export default function MyBookings() {
   const { user } = useContext(AuthContext);
   const [userRooms, setUserRooms] = useState([]);
   // const [startDate, setStartDate] = useState(new Date());
-
-
+  const [inputValue, setInputValue] = useState(new Date());
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/myRoom/${user?.email}`)
@@ -19,43 +18,42 @@ export default function MyBookings() {
       });
   }, [user?.email]);
 
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   const handleDateUpdate = (id, newDate) => {
-    console.log(id, newDate)
-    fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`,{
+    console.log(id, newDate);
+    fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
       method: "PATCH",
       headers: {
         "content-Type": "application/json",
       },
-      body: JSON.stringify({startDate: newDate }),
+      body: JSON.stringify({ startDate: newDate }),
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      const updatedRooms = userRooms.map((room) =>
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const updatedRooms = userRooms.map((room) =>
           room._id === id ? { ...room, startDate: newDate } : room
         );
         setUserRooms(updatedRooms);
-
-
-
-    })
+      });
   };
 
   const handleDelete = (id) => {
-    fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`,{
-      method: "DELETE"
+    fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
+      method: "DELETE",
     })
-    .then(res => res.json())
-    .then(data => {
-      if(data.deletedCount > 0){
-        alert("delete")
-        const remaining = userRooms.filter((r)=> r._id !== id)
-        setUserRooms(remaining)
-      }
-    })
-
-
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          alert("delete");
+          const remaining = userRooms.filter((r) => r._id !== id);
+          setUserRooms(remaining);
+        }
+      });
+  };
 
   return (
     <div className="container mx-auto my-12 lg:my-24">
@@ -87,28 +85,29 @@ export default function MyBookings() {
                 <td>$ {userRoom.price_per_night}</td>
                 <td>{userRoom.room_size}</td>
                 <td>
-                  {/* <input
-                  className="border p-2 rounded-md"
+                  <input
+                    className="border p-2 rounded-md"
                     type="date"
+                    onChange={handleChange}
                     defaultValue={
                       new Date(userRoom.startDate).toISOString().split("T")[0]
-
                     }
-                  /> */}
-                   <DatePicker
-                    className="border p-2 rounded-md"
-                    selected={new Date(userRoom.startDate)}
-                    onChange={(date) => handleDateUpdate(userRoom._id, date)}
                   />
-
-
-
-
                 </td>
 
                 <td>
-                <button onClick={()=>handleDateUpdate(userRoom._id, userRoom.startDate)} className="btn btn-success">Update Date</button>
-                  <button onClick={()=>handleDelete(userRoom._id)} className="btn btn-error">Cancel</button>
+                  <button
+                    onClick={() => handleDateUpdate(userRoom._id, inputValue)}
+                    className="btn btn-success"
+                  >
+                    Update Date
+                  </button>
+                  <button
+                    onClick={() => handleDelete(userRoom._id)}
+                    className="btn btn-error"
+                  >
+                    Cancel
+                  </button>
                 </td>
               </tr>
             ))}

@@ -13,7 +13,7 @@ export default function Rooms() {
       setRooms(data)
     })
   },[])
-  const availableRooms = rooms.filter(room => room.availability === 'Available')
+  // const availableRooms = rooms.filter(room => room.availability === 'Available')
   return (
     <div className="container mx-auto my-12 lg:my-24">
       <Helmet>
@@ -22,7 +22,7 @@ export default function Rooms() {
       <h2 className="text-center text-5xl uppercase tracking-wider mb-10">Available Rooms</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {
-          availableRooms.map((availableRoom)=> <RoomsCard key={availableRoom._id} availableRoom={availableRoom}></RoomsCard>)
+          rooms.map((availableRoom)=> <RoomsCard key={availableRoom._id} availableRoom={availableRoom}></RoomsCard>)
         }
 
       </div>

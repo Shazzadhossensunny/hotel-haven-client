@@ -19,7 +19,7 @@ console.log(featuredRooms)
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
-                    featuredRooms.filter((f)=>f.availability !== "Unavailable").map((room)=> <div key={room._id} className="space-y-4">
+                    featuredRooms.map((room)=> <div key={room._id} className="space-y-4">
                     <div>
                         <img className="h-[330px] w-full" src={room.image_url} alt="" />
                     </div>

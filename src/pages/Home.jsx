@@ -4,6 +4,7 @@ import FeaturedRooms from "../components/FeaturedRooms";
 import Map from "../components/Map";
 import NewsLetter from "../components/NewsLetter";
 import Reviews from "../components/Reviews";
+import PopUp from "../components/PopUp";
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
       <NewsLetter></NewsLetter>
       <Reviews></Reviews>
       <Map></Map>
+      <PopUp></PopUp>
 
     </div>
   )

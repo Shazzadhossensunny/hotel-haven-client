@@ -15,3 +15,17 @@ body {
   top: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+.imgBx::before {
+  content: " ";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #e7ffe0;
+  border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+  .imgBx::before {
+    background: #fff;
+  }
+}

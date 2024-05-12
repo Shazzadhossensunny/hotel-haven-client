@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Helmet } from "react-helmet-async";
 
 export default function MyBookings() {
   const { user } = useContext(AuthContext);
@@ -58,6 +59,9 @@ export default function MyBookings() {
 
   return (
     <div className="container mx-auto my-12 lg:my-24">
+      <Helmet>
+        <title>HotelHaven | My Booking</title>
+      </Helmet>
       <h2 className="text-center text-3xl lg:text-5xl uppercase tracking-wide">
         My Booking Rooms
       </h2>

@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../Context/AuthContextComponent";
+import { Helmet } from "react-helmet-async";
+
 
 export default function RoomDetail() {
   const loadData = useLoaderData();
@@ -59,6 +61,9 @@ export default function RoomDetail() {
   };
   return (
     <div className="container mx-auto my-12 lg:my-24">
+      <Helmet>
+        <title>HotelHaven | Room Details</title>
+      </Helmet>
       <div className="flex gap-6">
         <div className="w-2/3 mx-auto">
           <h2 className="text-center text-4xl font-semibold">{name}</h2>

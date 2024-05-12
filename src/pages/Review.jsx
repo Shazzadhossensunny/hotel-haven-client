@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Review() {
     const {user} = useContext(AuthContext)
@@ -29,6 +30,9 @@ export default function Review() {
   };
   return (
     <div className="container mx-auto my-12 lg:my-24">
+      <Helmet>
+        <title>HotelHaven | Review</title>
+      </Helmet>
       <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h2 className="text-2xl uppercase tracking-wide font-semibold text-gray-700 text-center dark:text-white">
           Leave A Review

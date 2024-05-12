@@ -1,22 +1,20 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Root from './pages/Root';
-import Error from './pages/Error';
-import Home from './pages/Home';
-import Rooms from './pages/Rooms';
-import MyBookings from './pages/MyBookings';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import AuthContextComponent from './Context/AuthContextComponent';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import RoomDetail from './pages/RoomDetail';
-import Review from './pages/Review';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./pages/Root";
+import Error from "./pages/Error";
+import Home from "./pages/Home";
+import Rooms from "./pages/Rooms";
+import MyBookings from "./pages/MyBookings";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import AuthContextComponent from "./Context/AuthContextComponent";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RoomDetail from "./pages/RoomDetail";
+import Review from "./pages/Review";
+import { HelmetProvider } from "react-helmet-async";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,44 +23,46 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/rooms",
-        element: <Rooms></Rooms>
+        element: <Rooms></Rooms>,
       },
       {
         path: "/myBookings",
-        element: <MyBookings></MyBookings>
+        element: <MyBookings></MyBookings>,
       },
       {
         path: "/login",
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: "/register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "/room/:id",
         element: <RoomDetail></RoomDetail>,
-        loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`),
       },
       {
         path: "/review/:id",
         element: <Review></Review>,
-        loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/review/${params.id}`)
-
-      }
-
-    ]
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/review/${params.id}`),
+      },
+    ],
   },
 ]);
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-   <AuthContextComponent>
-   <RouterProvider router={router} />
-   <ToastContainer></ToastContainer>
-   </AuthContextComponent>
-  </React.StrictMode>,
-)
+    <AuthContextComponent>
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
+      <ToastContainer></ToastContainer>
+    </AuthContextComponent>
+  </React.StrictMode>
+);

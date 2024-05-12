@@ -3,6 +3,7 @@ import loginBg from '../assets/login.jpg'
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 export default function Login() {
   const navigate = useNavigate()
@@ -46,6 +47,9 @@ export default function Login() {
   if (user || loading) return
   return (
     <div className='flex justify-center items-center my-12'>
+      <Helmet>
+        <title>HotelHaven | Login</title>
+      </Helmet>
     <div className='flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl '>
       <div
         className='hidden bg-cover bg-center lg:block lg:w-1/2'

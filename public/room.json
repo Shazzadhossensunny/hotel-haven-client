@@ -4,7 +4,7 @@
     "description": "Experience luxury and comfort in our deluxe king room. Featuring a spacious king-size bed, modern amenities, and elegant decor.",
     "price_per_night": 220,
     "room_size": "400 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/pdVwD73D/deluxe.jpg",
     "special_offers": [
       "Complimentary breakfast for two",
@@ -17,7 +17,7 @@
     "description": "Indulge in luxury with our spacious executive suite. Featuring a separate living area, panoramic city views, and personalized service.",
     "price_per_night": 350,
     "room_size": "600 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/cHrPz3xC/suite.jpg",
     "special_offers": [
       "Complimentary airport transfer",
@@ -30,7 +30,7 @@
     "description": "Create unforgettable memories in our spacious family villa. Featuring multiple bedrooms, a private pool, and lush garden views.",
     "price_per_night": 500,
     "room_size": "1500 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/KvnwCx2P/vila.jpg",
     "special_offers": [],
     "reviews": []
@@ -40,7 +40,7 @@
     "description": "Escape to paradise in our oceanfront bungalow. Enjoy direct beach access, stunning ocean views, and personalized service.",
     "price_per_night": 400,
     "room_size": "800 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/Z5HgKH00/occenfront.jpg",
     "special_offers": [
       "Complimentary welcome drinks",
@@ -53,7 +53,7 @@
     "description": "Experience the pinnacle of luxury in our penthouse suite. Featuring a private terrace, jacuzzi, and breathtaking city skyline views.",
     "price_per_night": 800,
     "room_size": "1200 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/Ss2tdpdz/pentahouse.jpg",
     "special_offers": [
       "24/7 butler service",
@@ -66,7 +66,7 @@
     "description": "Enjoy comfort and convenience in our standard double room. Perfect for solo travelers or couples exploring the city.",
     "price_per_night": 150,
     "room_size": "300 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.postimg.cc/wvC4bb44/double.jpg",
     "special_offers": [],
     "reviews": []
@@ -76,7 +76,7 @@
     "description": "Indulge in relaxation with our luxury spa suite. Featuring a private sauna, steam room, and massage services.",
     "price_per_night": 600,
     "room_size": "1000 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.ibb.co/rsGkVdj/spa-suite.jpg",
     "special_offers": [
       "Complimentary spa treatment",
@@ -89,7 +89,7 @@
     "description": "Enjoy serene garden views in our garden view room. Featuring a private balcony, plush bedding, and modern amenities.",
     "price_per_night": 180,
     "room_size": "350 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.ibb.co/9N9Vpkh/garden.jpg",
     "special_offers": [],
     "reviews": []
@@ -99,7 +99,7 @@
     "description": "Experience beachfront bliss in our charming beachfront cottage. Featuring direct beach access, cozy interiors, and sunset views.",
     "price_per_night": 300,
     "room_size": "500 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.ibb.co/7rJ4Ygb/beachfront.jpg",
     "special_offers": [],
     "reviews": []
@@ -109,7 +109,7 @@
     "description": "Escape to the mountains in our cozy mountain view chalet. Featuring panoramic mountain vistas, a fireplace, and rustic charm.",
     "price_per_night": 250,
     "room_size": "450 sq ft",
-    "availability": "Available",
+    "availability": "available",
     "image_url": "https://i.ibb.co/ftS1mc6/mountaine.jpg",
     "special_offers": [],
     "reviews": []

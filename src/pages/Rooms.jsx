@@ -37,11 +37,11 @@ export default function Rooms() {
 
   // const availableRooms = rooms.filter(room => room.availability === 'Available')
   return (
-    <div className="container mx-auto my-12 lg:my-24">
+    <div className="container mx-auto my-12 lg:my-24 px-3 lg:px-0">
       <Helmet>
         <title>HotelHaven | Rooms</title>
       </Helmet>
-      <h2 className="text-center text-5xl uppercase tracking-wider mb-10">Available Rooms</h2>
+      <h2 className="text-center text-3xl lg:text-5xl uppercase tracking-wider mb-10">Available Rooms</h2>
       {/* filter */}
       <div className="flex items-center pb-9 gap-5">
         <div>

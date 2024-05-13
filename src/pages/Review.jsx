@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 export default function Review() {
     const {user} = useContext(AuthContext)
@@ -22,9 +23,8 @@ export default function Review() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if(data.modifiedCount > 0){
-            alert('successfully add review')
+            toast.success('Successfully add review')
         }
       });
   };

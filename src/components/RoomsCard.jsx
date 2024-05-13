@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function RoomsCard({ availableRoom }) {
   const { _id, image_url, name, price_per_night, availability, reviews} =
     availableRoom;
-    console.log(availableRoom)
   return (
     <Link to={`/room/${_id}`}>
       <div className="card bg-base-100 shadow-xl">

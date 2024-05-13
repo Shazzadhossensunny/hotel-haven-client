@@ -28,6 +28,7 @@ export default function Login() {
     .catch((error)=>{
       toast.error("Please Provide Correct email & password");
       console.log(error.message)
+      setLoading(false)
     })
   }
 

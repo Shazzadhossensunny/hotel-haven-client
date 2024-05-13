@@ -48,7 +48,6 @@ export default function RoomDetail() {
           setIsRoomBooked(true);
           toast.success("Successfully Book Room");
         }
-        console.log(data);
       });
   };
   const handleConfirmBooking = () => {
@@ -56,18 +55,21 @@ export default function RoomDetail() {
       toast.error("Please select a booking date");
       return;
     }
-    handleBook(_id, "Unavailable", startDate);
+    handleBook(_id, "unavailable", startDate);
     document.getElementById("my_modal_5").close();
   };
+
+
+
   return (
-    <div className="container mx-auto my-12 lg:my-24">
+    <div className="container mx-auto my-12 lg:my-24 px-3 lg:px-0">
       <Helmet>
         <title>HotelHaven | Room Details</title>
       </Helmet>
       <div className="flex gap-6">
-        <div className="w-2/3 mx-auto">
-          <h2 className="text-center text-4xl font-semibold">{name}</h2>
-          <div className="flex justify-between my-5">
+        <div className="w-full lg:w-2/3 mx-auto">
+          <h2 className="text-center text-3xl lg:text-4xl font-semibold">{name}</h2>
+          <div className="flex justify-between my-5 flex-wrap">
             <h2 className="text-2xl font-bold">
               Price Per Night : $ {price_per_night}
             </h2>
@@ -94,9 +96,9 @@ export default function RoomDetail() {
           </div>
 
           <button
-            disabled={availability !== "Available"}
+            disabled={availability !== "available"}
             onClick={() => {
-              handleBook(_id, "Unavailable");
+              handleBook(_id, "unavailable");
               document.getElementById("my_modal_5").showModal();
             }}
             className="btn btn-primary mt-5"

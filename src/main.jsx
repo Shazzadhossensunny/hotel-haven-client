@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import RoomDetail from "./pages/RoomDetail";
 import Review from "./pages/Review";
 import { HelmetProvider } from "react-helmet-async";
+import PraivateRoute from "./PrivateRoute/PraivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myBookings",
-        element: <MyBookings></MyBookings>,
+        element: <PraivateRoute><MyBookings></MyBookings></PraivateRoute>,
       },
       {
         path: "/login",
@@ -43,13 +44,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/room/:id",
-        element: <RoomDetail></RoomDetail>,
+        element: <PraivateRoute><RoomDetail></RoomDetail></PraivateRoute>,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`),
       },
       {
         path: "/review/:id",
-        element: <Review></Review>,
+        element: <PraivateRoute><Review></Review></PraivateRoute>,
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_API_URL}/review/${params.id}`),
       },

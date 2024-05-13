@@ -11,9 +11,9 @@ export default function FeaturedRooms() {
             setFeaturedRooms(data)
         })
     },[])
-console.log(featuredRooms)
+
   return (
-    <div className="container mx-auto my-12 lg:my-24">
+    <div className="container mx-auto my-12 lg:my-24 px-3 lg:px-0">
         <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-5xl text-[#292929] uppercase tracking-wide">Featured Rooms</h2>
         </div>

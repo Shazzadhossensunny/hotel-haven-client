@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 export default function MyBookings() {
   const { user } = useContext(AuthContext);
@@ -21,7 +23,6 @@ export default function MyBookings() {
   };
 
   const handleDateUpdate = (id, newDate) => {
-    console.log(id, newDate);
     fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
       method: "PATCH",
       headers: {
@@ -32,6 +33,9 @@ export default function MyBookings() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.modifiedCount > 0){
+          toast.success("Update Booking Date Successfully")
+        }
         const updatedRooms = userRooms.map((room) =>
           room._id === id ? { ...room, startDate: newDate } : room
         );
@@ -46,7 +50,7 @@ export default function MyBookings() {
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
-          alert("delete");
+          toast.success("Successfully Cancel Booking")
           const remaining = userRooms.filter((r) => r._id !== id);
           setUserRooms(remaining);
         }
@@ -71,6 +75,7 @@ export default function MyBookings() {
               <th>Price Per Night</th>
               <th>Room Size</th>
               <th>Booking Date</th>
+              <th>Review</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -91,6 +96,11 @@ export default function MyBookings() {
                       new Date(userRoom?.startDate).toISOString().split("T")[0]
                     }
                   />
+                </td>
+                <td>
+                  <Link to={`/review/${userRoom._id}`}>
+                  <button className="btn btn-accent">Add Review</button>
+                  </Link>
                 </td>
 
                 <td>

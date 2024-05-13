@@ -5,7 +5,7 @@ export default function NewsLetter() {
       <div className="container mx-auto py-14 lg:py-24">
         <div className="flex items-center justify-center flex-wrap gap-5">
         <HiOutlineMailOpen className="text-3xl lg:text-5xl"></HiOutlineMailOpen>
-          <h2 className="text-3xl lg:text-5xl">Join our weekly Newsletter</h2>
+          <h2 className="text-3xl lg:text-5xl text-center lg:text-left">Join our weekly Newsletter</h2>
           <div className="join">
             <input
               type="email"

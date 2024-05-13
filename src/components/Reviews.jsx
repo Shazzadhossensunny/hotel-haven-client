@@ -15,11 +15,10 @@ export default function Reviews() {
     .then(res => res.json())
     .then(data => setReviews(data))
   },[])
-  console.log(reviews)
   return (
     <div className="p-12 md:p-24">
       <div className="w-full lg:w-1/2 mx-auto">
-        <h3 className="text-5xl uppercase tracking-wide">What Clients Say</h3>
+        <h3 className="text-3xl lg:text-5xl uppercase tracking-wide">What Clients Say</h3>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}

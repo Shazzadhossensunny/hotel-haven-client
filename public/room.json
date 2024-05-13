@@ -10,21 +10,7 @@
       "Complimentary breakfast for two",
       "20% discount on spa services"
     ],
-    "reviews": [
-      {
-        "user": "John Doe",
-        "rating": 5,
-        "comment": "Absolutely loved my stay in the deluxe king room! The bed was incredibly comfortable, and the view from the window was stunning.",
-        "timestamp": "2024-05-09T12:30:45Z"
-      },
-      {
-        "user": "Jane Smith",
-        "rating": 4,
-        "comment": "Great value for money. The room was clean and well-maintained, and the staff were very friendly.",
-        "timestamp": "2024-05-08T15:20:10Z"
-      }
-    ],
-    "total_reviews": 2
+    "reviews": []
   },
   {
     "name": "Executive Suite",
@@ -37,8 +23,7 @@
       "Complimentary airport transfer",
       "Access to exclusive lounge"
     ],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Family Villa",
@@ -48,8 +33,7 @@
     "availability": "Available",
     "image_url": "https://i.postimg.cc/KvnwCx2P/vila.jpg",
     "special_offers": [],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Oceanfront Bungalow",
@@ -62,8 +46,7 @@
       "Complimentary welcome drinks",
       "Access to water sports facilities"
     ],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Penthouse Suite",
@@ -76,8 +59,7 @@
       "24/7 butler service",
       "Complimentary champagne upon arrival"
     ],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Standard Double Room",
@@ -87,8 +69,7 @@
     "availability": "Available",
     "image_url": "https://i.postimg.cc/wvC4bb44/double.jpg",
     "special_offers": [],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Luxury Spa Suite",
@@ -101,8 +82,7 @@
       "Complimentary spa treatment",
       "Access to fitness center"
     ],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Garden View Room",
@@ -112,8 +92,7 @@
     "availability": "Available",
     "image_url": "https://i.ibb.co/9N9Vpkh/garden.jpg",
     "special_offers": [],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Beachfront Cottage",
@@ -123,8 +102,7 @@
     "availability": "Available",
     "image_url": "https://i.ibb.co/7rJ4Ygb/beachfront.jpg",
     "special_offers": [],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   },
   {
     "name": "Mountain View Chalet",
@@ -134,7 +112,6 @@
     "availability": "Available",
     "image_url": "https://i.ibb.co/ftS1mc6/mountaine.jpg",
     "special_offers": [],
-    "reviews": [],
-    "total_reviews": 0
+    "reviews": []
   }
 ]

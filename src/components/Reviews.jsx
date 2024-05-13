@@ -31,20 +31,24 @@ export default function Reviews() {
           className="mySwiper"
         >
           {
-            reviews.map((rev, index)=> <SwiperSlide key={index}>
-            <div className="space-y-5 mt-10">
-              <h2 className="text-2xl font-bold">Rating : {rev.rating}</h2>
-              <p>
-                {rev.comment}
-              </p>
-                <div>
-                  <h3 className="font-bold uppercase">{rev.name}</h3>
-                  <p className="text-xs">{new Date(rev.timestamp).toLocaleString()}</p>
+    reviews.length > 0 ? (
+        reviews.map((rev, index) => (
+            <SwiperSlide key={index}>
+                <div className="space-y-5 mt-10">
+                    <h2 className="text-2xl font-bold">Rating: {rev.rating}</h2>
+                    <p>{rev.comment}</p>
+                    <div>
+                        <h3 className="font-bold uppercase">{rev.name}</h3>
+                        <p className="text-xs">{new Date(rev.timestamp).toLocaleString()}</p>
+                    </div>
                 </div>
+            </SwiperSlide>
+        ))
+    ) : (
+        <div className="text-center text-gray-500 mt-8">No reviews available</div>
+    )
+}
 
-            </div>
-          </SwiperSlide>)
-          }
 
 
         </Swiper>

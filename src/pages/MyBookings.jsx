@@ -1,17 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthContextComponent";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { Helmet } from "react-helmet-async";
 
 export default function MyBookings() {
   const { user } = useContext(AuthContext);
   const [userRooms, setUserRooms] = useState([]);
-  // const [startDate, setStartDate] = useState(new Date());
   const [inputValue, setInputValue] = useState(new Date());
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/myRoom/${user?.email}`)
+    if(user?.email)
+    fetch(`${import.meta.env.VITE_API_URL}/myRoom/${user?.email}`, {credentials: 'include'})
       .then((res) => res.json())
       .then((data) => {
         setUserRooms(data);
@@ -60,7 +58,7 @@ export default function MyBookings() {
       <Helmet>
         <title>HotelHaven | My Booking</title>
       </Helmet>
-      <h2 className="text-center text-3xl lg:text-5xl uppercase tracking-wide">
+      <h2 className="text-center text-3xl lg:text-5xl uppercase tracking-wide mb-10">
         My Booking Rooms
       </h2>
       <div className="overflow-x-auto">
@@ -90,7 +88,7 @@ export default function MyBookings() {
                     type="date"
                     onChange={handleChange}
                     defaultValue={
-                      new Date(userRoom.startDate).toISOString().split("T")[0]
+                      new Date(userRoom?.startDate).toISOString().split("T")[0]
                     }
                   />
                 </td>

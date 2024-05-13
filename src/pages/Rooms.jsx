@@ -52,7 +52,7 @@ export default function Rooms() {
           <p>Max Price</p>
           <input type="number" placeholder="Type here" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} className="input input-bordered w-full max-w-xs" />
         </div>
-        <button onClick={handleFilter} className="btn btn-primary">Filter</button>
+        <button onClick={handleFilter} className="btn btn-primary mt-5">Filter</button>
 
 
       </div>

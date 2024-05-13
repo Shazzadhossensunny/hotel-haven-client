@@ -21,7 +21,7 @@ export default function FeaturedRooms() {
                 {
                     featuredRooms.map((room)=> <div key={room._id} className="space-y-4">
                     <div>
-                        <img className="h-[330px] w-full" src={room.image_url} alt="" />
+                        <img className="h-[330px] w-full" src={room.image_url[0]} alt="" />
                     </div>
                     <h1 className="text-2xl font-semibold text-[#7e6648]">{room.name}e</h1>
                     <p>{room.description}</p>

@@ -1,16 +1,15 @@
 import { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { Helmet } from "react-helmet-async";
 import { FaStar } from "react-icons/fa";
 
 
+
 export default function RoomDetail() {
   const loadData = useLoaderData();
-  const [startDate, setStartDate] = useState(null);
+  const [bookDate, setBookDate] = useState("")
   const [isRoomBooked, setIsRoomBooked] = useState(false);
   const { user } = useContext(AuthContext);
   const email = user?.email;
@@ -52,11 +51,11 @@ export default function RoomDetail() {
       });
   };
   const handleConfirmBooking = () => {
-    if (!startDate) {
+    if (!bookDate) {
       toast.error("Please select a booking date");
       return;
     }
-    handleBook(_id, "unavailable", startDate);
+    handleBook(_id, "unavailable", bookDate);
     document.getElementById("my_modal_5").close();
   };
 
@@ -77,10 +76,19 @@ export default function RoomDetail() {
             <h3 className="text-xl font-bold">Size : {room_size}</h3>
           </div>
           <div className="relative">
-            <img className="w-full" src={image_url} alt="" />
-            <span className="badge badge-primary absolute top-5 right-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3">
+              {
+                image_url.map((img, index)=>
+                <div  key={index}>
+                  <img className="h-full w-full object-cover lg:h-[340px]" src={img} alt="" />
+                </div>
+                )
+              }
+              <span className="badge badge-primary absolute top-5 right-5">
               {availability}
             </span>
+            </div>
+
           </div>
           <p className="text-lg mt-4">{description}</p>
           <div className="mt-4">
@@ -143,11 +151,7 @@ export default function RoomDetail() {
           <p className="py-4">{description}</p>
           <div className="mt-5">
             <p>Book a date</p>
-            <DatePicker
-              className="border p-2 rounded-md"
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-            />
+            <input type="date" className="border p-2 rounded-md" value={bookDate} onChange={(e)=> setBookDate(e.target.value)} name="" id="" />
           </div>
 
           <div className="modal-action">
@@ -155,7 +159,7 @@ export default function RoomDetail() {
               {/* if there is a button in form, it will close the modal */}
               <button
                 className="btn btn-success"
-                disabled={!startDate}
+                disabled={!bookDate}
                 onClick={handleConfirmBooking}
               >
                 Confirm

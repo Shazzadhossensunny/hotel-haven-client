@@ -43,7 +43,15 @@ export default function MyBookings() {
       });
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id, startDate) => {
+    const bookingDate = new Date(startDate).getTime();
+    const currentDate = new Date().getTime();
+    const oneDay = 24 * 60 * 60 * 1000;
+
+    if (currentDate > bookingDate - oneDay) {
+        toast.error("Cannot cancel booking within one day of the booking date.");
+        return;
+    }
     fetch(`${import.meta.env.VITE_API_URL}/rooms/${id}`, {
       method: "DELETE",
     })
@@ -111,7 +119,7 @@ export default function MyBookings() {
                     Update Date
                   </button>
                   <button
-                    onClick={() => handleDelete(userRoom._id)}
+                    onClick={() => handleDelete(userRoom._id, inputValue)}
                     className="btn btn-sm btn-error"
                   >
                     Cancel

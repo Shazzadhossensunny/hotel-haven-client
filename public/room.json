@@ -5,7 +5,11 @@
     "price_per_night": 220,
     "room_size": "400 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/pdVwD73D/deluxe.jpg",
+    "image_url": [
+      "https://i.postimg.cc/pdVwD73D/deluxe.jpg",
+      "https://i.ibb.co/s6smvpV/deluxe2.jpg",
+      "https://i.ibb.co/1qKVvbz/delux3.jpg"
+    ],
     "special_offers": [
       "Complimentary breakfast for two",
       "20% discount on spa services"
@@ -18,7 +22,11 @@
     "price_per_night": 350,
     "room_size": "600 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/cHrPz3xC/suite.jpg",
+    "image_url": [
+      "https://i.postimg.cc/cHrPz3xC/suite.jpg",
+      "https://i.ibb.co/kxHfX6x/suite2.jpg",
+      "https://i.ibb.co/xzHrSwY/suite3.jpg"
+    ],
     "special_offers": [
       "Complimentary airport transfer",
       "Access to exclusive lounge"
@@ -31,7 +39,11 @@
     "price_per_night": 500,
     "room_size": "1500 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/KvnwCx2P/vila.jpg",
+    "image_url": [
+      "https://i.postimg.cc/KvnwCx2P/vila.jpg",
+      "https://i.ibb.co/4YPYJ0c/vill2.jpg",
+      "https://i.ibb.co/JjWzj9F/vill3.jpg"
+    ],
     "special_offers": [],
     "reviews": []
   },
@@ -41,7 +53,11 @@
     "price_per_night": 400,
     "room_size": "800 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/Z5HgKH00/occenfront.jpg",
+    "image_url": [
+      "https://i.postimg.cc/Z5HgKH00/occenfront.jpg",
+      "https://i.ibb.co/zQ9fDYD/occen2.jpg",
+      "https://i.ibb.co/mGvmmLg/occen3.jpg"
+    ],
     "special_offers": [
       "Complimentary welcome drinks",
       "Access to water sports facilities"
@@ -54,7 +70,11 @@
     "price_per_night": 800,
     "room_size": "1200 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/Ss2tdpdz/pentahouse.jpg",
+    "image_url": [
+      "https://i.postimg.cc/Ss2tdpdz/pentahouse.jpg",
+      "https://i.ibb.co/PNNwdWM/pentahouse2.jpg",
+      "https://i.ibb.co/Jyq9jxh/pentahouse3.jpg"
+    ],
     "special_offers": [
       "24/7 butler service",
       "Complimentary champagne upon arrival"
@@ -67,7 +87,11 @@
     "price_per_night": 150,
     "room_size": "300 sq ft",
     "availability": "available",
-    "image_url": "https://i.postimg.cc/wvC4bb44/double.jpg",
+    "image_url": [
+      "https://i.postimg.cc/wvC4bb44/double.jpg",
+      "https://i.ibb.co/DKKq3ZX/double2.jpg",
+      "https://i.ibb.co/1nVb1fv/double3.jpg"
+    ],
     "special_offers": [],
     "reviews": []
   },
@@ -77,7 +101,11 @@
     "price_per_night": 600,
     "room_size": "1000 sq ft",
     "availability": "available",
-    "image_url": "https://i.ibb.co/rsGkVdj/spa-suite.jpg",
+    "image_url": [
+      "https://i.ibb.co/rsGkVdj/spa-suite.jpg",
+      "https://i.ibb.co/TrYVhpK/spa2.jpg",
+      "https://i.ibb.co/vBCV962/spa3.jpg"
+    ],
     "special_offers": [
       "Complimentary spa treatment",
       "Access to fitness center"
@@ -90,7 +118,11 @@
     "price_per_night": 180,
     "room_size": "350 sq ft",
     "availability": "available",
-    "image_url": "https://i.ibb.co/9N9Vpkh/garden.jpg",
+    "image_url": [
+      "https://i.ibb.co/9N9Vpkh/garden.jpg",
+      "https://i.ibb.co/0Kbktgt/garder2.jpg",
+      "https://i.ibb.co/wrG14bZ/garder3.jpg"
+    ],
     "special_offers": [],
     "reviews": []
   },
@@ -100,7 +132,11 @@
     "price_per_night": 300,
     "room_size": "500 sq ft",
     "availability": "available",
-    "image_url": "https://i.ibb.co/7rJ4Ygb/beachfront.jpg",
+    "image_url": [
+      "https://i.ibb.co/7rJ4Ygb/beachfront.jpg",
+      "https://i.ibb.co/JrM9YVL/beach2.jpg",
+      "https://i.ibb.co/F5h80hR/beach3.jpg"
+    ],
     "special_offers": [],
     "reviews": []
   },
@@ -110,7 +146,11 @@
     "price_per_night": 250,
     "room_size": "450 sq ft",
     "availability": "available",
-    "image_url": "https://i.ibb.co/ftS1mc6/mountaine.jpg",
+    "image_url": [
+      "https://i.ibb.co/ftS1mc6/mountaine.jpg",
+      "https://i.ibb.co/c1kFcQq/moutaine2.jpg",
+      "https://i.ibb.co/fHDMJCC/mountain3.jpg"
+    ],
     "special_offers": [],
     "reviews": []
   }

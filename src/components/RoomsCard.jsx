@@ -8,7 +8,7 @@ export default function RoomsCard({ availableRoom }) {
       <div className="card bg-base-100 shadow-xl">
         <figure>
           <img className="h-[330px] w-full"
-            src={image_url}
+            src={image_url[0]}
             alt="room"
           />
         </figure>

@@ -99,20 +99,20 @@ export default function MyBookings() {
                 </td>
                 <td>
                   <Link to={`/review/${userRoom._id}`}>
-                  <button className="btn btn-accent">Add Review</button>
+                  <button className="btn btn-sm btn-accent">Add Review</button>
                   </Link>
                 </td>
 
-                <td>
+                <td className="flex gap-1">
                   <button
                     onClick={() => handleDateUpdate(userRoom._id, inputValue)}
-                    className="btn btn-success"
+                    className="btn btn-sm btn-success"
                   >
                     Update Date
                   </button>
                   <button
                     onClick={() => handleDelete(userRoom._id)}
-                    className="btn btn-error"
+                    className="btn btn-sm btn-error"
                   >
                     Cancel
                   </button>

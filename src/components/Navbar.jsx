@@ -70,11 +70,11 @@ export default function Navbar() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 space-x-7">
               <li className="text-lg font-semibold text-white">
-                <NavLink to='/rooms'>Rooms</NavLink>
+                <NavLink className='active-route' to='/rooms'>Rooms</NavLink>
 
               </li>
               <li className="text-lg font-semibold text-white">
-                <NavLink to='/myBookings'>My Bookings</NavLink>
+                <NavLink  className='active-route' to='/myBookings'>My Bookings</NavLink>
               </li>
             </ul>
           </div>

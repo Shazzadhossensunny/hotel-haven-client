@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from "../Context/AuthContextComponent";
 import { Helmet } from "react-helmet-async";
+import { FaStar } from "react-icons/fa";
 
 
 export default function RoomDetail() {
@@ -110,9 +111,9 @@ export default function RoomDetail() {
             <h2 className="text-2xl font-semibold mb-4">Reviews:</h2>
             {reviews.length > 0 ? (
               reviews.map((review, index) => (
-                <div key={index} className="border-b border-gray-300 pb-3">
+                <div key={index} className=" border-green-300 pb-3 shadow-lg p-4 rounded-xl space-y-3 border-b-2 mt-3">
                   <p className="text-lg">{review.user}</p>
-                  <p>Rating: {review.rating}</p>
+                  <p className="flex items-center gap-2"><FaStar></FaStar> {review.rating}</p>
                   <p>{review.comment}</p>
                   <p>{new Date(review.timestamp).toLocaleString()}</p>
                 </div>

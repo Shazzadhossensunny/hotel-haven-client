@@ -6,6 +6,11 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+a.active,
+.active-route {
+  background: #f57b1d !important;
+  color: #fff !important;
+}
 .overlay::after {
   content: "";
   position: absolute;

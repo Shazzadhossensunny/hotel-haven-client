@@ -48,7 +48,7 @@ export default function MyBookings() {
     const currentDate = new Date().getTime();
     const oneDay = 24 * 60 * 60 * 1000;
 
-    if (currentDate > bookingDate - oneDay) {
+    if (currentDate >= bookingDate - oneDay) {
         toast.error("Cannot cancel booking within one day of the booking date.");
         return;
     }

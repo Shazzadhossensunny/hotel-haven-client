@@ -1,8 +1,28 @@
-# React + Vite
+# HotelHaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Where Comfort Meets Luxury: Your Perfect Stay Awaits!
 
-Currently, two official plugins are available:
+# assignment_category_0004
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Category name
+
+## https://hotel-haven-c883c.web.app/
+
+Website Live Link Firebse
+
+## https://sprightly-heliotrope-3d2de1.netlify.app/
+
+Website Live Link Netlify
+
+## Features
+
+- Users can See all available and unavailable rooms in room page
+- Users can book an available room
+- Users can review their own booked room
+- Users can update their booking date
+- Users can cancel their booking
+
+## NPM Package
+
+- React-Helmet
+- React-Leaflet

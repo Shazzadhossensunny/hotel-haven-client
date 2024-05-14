@@ -11,7 +11,7 @@ export default function MyBookings() {
 
   useEffect(() => {
     if(user?.email)
-    fetch(`${import.meta.env.VITE_API_URL}/myRoom/${user?.email}`, {credentials: 'include'})
+    fetch(`${import.meta.env.VITE_API_URL}/myRoom/${user?.email}`,  {headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'},credentials: 'include'})
       .then((res) => res.json())
       .then((data) => {
         setUserRooms(data);

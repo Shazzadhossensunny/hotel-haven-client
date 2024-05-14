@@ -16,7 +16,7 @@ export default function PopUp() {
   return (
     <div>
          {
-        showPopup &&  <div className="popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+        showPopup &&  <div className="popup fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div className="contentBox relative w-[300px] lg:w-[600px] h-auto lg:h-[400px] bg-white rounded-2xl flex flex-col lg:flex-row shadow">
             <div onClick={handleClose} className="close absolute top-0 lg:top-5 right-0 lg:right-5 w-10 h-10 bg-[#ff4d54] rounded-full z-10 cursor-pointer"><IoMdClose className='w-full h-full text-white'></IoMdClose></div>
             <div className="imgBx relative w-[300px] h-[200px] lg:h-[400px] -translate-y-12 lg:-translate-y-0 flex justify-center items-center">

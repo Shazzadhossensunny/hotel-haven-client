@@ -20,6 +20,9 @@ a.active,
   top: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+.popup {
+  z-index: 99999 !important;
+}
 .imgBx::before {
   content: " ";
   position: absolute;

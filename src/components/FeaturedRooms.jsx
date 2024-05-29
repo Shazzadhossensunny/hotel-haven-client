@@ -15,7 +15,7 @@ export default function FeaturedRooms() {
   return (
     <div className="container mx-auto my-12 lg:my-24 px-3 lg:px-0">
         <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl text-[#292929] uppercase tracking-wide">Featured Rooms</h2>
+            <h2 className="text-3xl lg:text-5xl text-[#292929 uppercase tracking-wide ">Featured Rooms</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {

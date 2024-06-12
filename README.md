@@ -2,10 +2,6 @@
 
 Where Comfort Meets Luxury: Your Perfect Stay Awaits!
 
-# assignment_category_0004
-
-Category name
-
 ## https://hotel-haven-c883c.web.app/
 
 Website Live Link Firebse
